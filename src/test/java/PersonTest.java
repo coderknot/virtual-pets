@@ -14,4 +14,14 @@ public class PersonTest {
     Person testPerson = new Person("Harry", "harry@gmail.com");
     assertEquals("harry@gmail.com", testPerson.getEmail());
   }
+
+  @Test
+  public void equals_returnsTrueIfNameAndEmailAreSame_True() {
+    Person firstPerson = new Person("Harry", "harry@gmail.com");
+    firstPerson.save();
+    Person secondPerson = new Person("Ron", "ron@gmail.com");
+    secondPerson.save();
+    assertTrue(firstPerson.equals(secondPerson));
+  }
+
 }
