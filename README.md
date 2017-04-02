@@ -52,4 +52,4 @@
 
 ## License
 *GPL*
-Copyright (c) 2017 **_Grace Stuart_**
+Copyright (c) 2017 **_Grace Stuart and Chris Carr_**
