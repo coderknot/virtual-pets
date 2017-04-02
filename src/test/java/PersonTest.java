@@ -9,5 +9,9 @@ public class PersonTest {
     assertEquals(true, testPerson instanceof Person);
   }
 
-  
+  @Test
+  public void person_instantiatesWithEmail_String() {
+    Person testPerson = new Person("Harry", "harry@gmail.com");
+    assertEquals("harry@gmail.com", testPerson.getEmail());
+  }
 }
