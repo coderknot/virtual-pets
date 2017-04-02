@@ -19,7 +19,7 @@ public class PersonTest {
   public void equals_returnsTrueIfNameAndEmailAreSame_True() {
     Person firstPerson = new Person("Harry", "harry@gmail.com");
     firstPerson.save();
-    Person secondPerson = new Person("Ron", "ron@gmail.com");
+    Person secondPerson = new Person("Harry", "harry@gmail.com");
     secondPerson.save();
     assertTrue(firstPerson.equals(secondPerson));
   }
