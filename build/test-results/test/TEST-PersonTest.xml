@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PersonTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-04-03T23:34:27" hostname="Epicodus-6F.local" time="0.089">
+  <properties/>
+  <testcase name="save_insertsObjectIntoDatabase_Person" classname="PersonTest" time="0.015"/>
+  <testcase name="person_instantiatesCorrectly_true" classname="PersonTest" time="0.005"/>
+  <testcase name="getName_personInstantiatesWithEmail_String" classname="PersonTest" time="0.005"/>
+  <testcase name="getName_personInstantiatesWithName_Henry" classname="PersonTest" time="0.004"/>
+  <testcase name="getMonsters_retrievesAllMonstersFromDatabase_monstersList" classname="PersonTest" time="0.024"/>
+  <testcase name="equals_returnsTrueIfNameAndEmailAreSame_true" classname="PersonTest" time="0.004"/>
+  <testcase name="all_returnsAllInstancesOfPerson_true" classname="PersonTest" time="0.02"/>
+  <testcase name="save_assignsIdToObject" classname="PersonTest" time="0.012"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

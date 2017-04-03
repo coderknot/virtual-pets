@@ -18,6 +18,7 @@ public abstract class Monster {
   public Timestamp lastAte;
   public Timestamp lastPlayed;
   public Timer timer;
+  public String type;
 
   public static final int MAX_FOOD_LEVEL = 3;
   public static final int MAX_SLEEP_LEVEL = 8;
@@ -143,31 +144,33 @@ public abstract class Monster {
 
   public void save() {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "INSERT INTO monsters (name, personId, birthday) VALUES (:name, :personId, now())";
+      String sql = "INSERT INTO monsters (name, personId, birthday, type) VALUES (:name, :personId, now(), :type)";
       this.id = (int) con.createQuery(sql, true)
         .addParameter("name", this.name)
         .addParameter("personId", this.personId)
+        .addParameter("type", this.type)
         .executeUpdate()
         .getKey();
     }
   }
 
-  public static List<Monster> all() {
-    String sql = "SELECT * FROM monsters;";
-    try(Connection con = DB.sql2o.open()) {
-      return con.createQuery(sql).executeAndFetch(Monster.class);
-    }
-  }
-
-  public static Monster find(int id) {
-    try(Connection con = DB.sql2o.open()) {
-      String sql = "SELECT * FROM monsters where id=:id";
-      Monster monster = con.createQuery(sql)
-        .addParameter("id", id)
-        .executeAndFetchFirst(Monster.class);
-      return monster;
-    }
-  }
+  // Remove from parent, added to each subclass
+  // public static List<Monster> all() {
+  //   String sql = "SELECT * FROM monsters;";
+  //   try(Connection con = DB.sql2o.open()) {
+  //     return con.createQuery(sql).executeAndFetch(Monster.class);
+  //   }
+  // }
+  //
+  // public static Monster find(int id) {
+  //   try(Connection con = DB.sql2o.open()) {
+  //     String sql = "SELECT * FROM monsters where id=:id";
+  //     Monster monster = con.createQuery(sql)
+  //       .addParameter("id", id)
+  //       .executeAndFetchFirst(Monster.class);
+  //     return monster;
+  //   }
+  // }
 
   public void startTimer(){
     Monster currentMonster = this;

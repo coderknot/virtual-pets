@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WaterMonsterTest" tests="36" skipped="0" failures="0" errors="0" timestamp="2017-04-03T23:34:27" hostname="Epicodus-6F.local" time="12.442">
+  <properties/>
+  <testcase name="waterMonster_instantiatesCorrectly_true" classname="WaterMonsterTest" time="0.005"/>
+  <testcase name="timer_executesDepleteLevelsMethod" classname="WaterMonsterTest" time="6.005"/>
+  <testcase name="water_recordsTimeLastWaterInDatabase" classname="WaterMonsterTest" time="0.02"/>
+  <testcase name="feed_throwsExceptionIfFoodLevelIsAtMaxValue" classname="WaterMonsterTest" time="0.014"/>
+  <testcase name="water_increasesWaterMonsterWaterLevel" classname="WaterMonsterTest" time="0.009"/>
+  <testcase name="save_savesPersonIdIntoDB_true" classname="WaterMonsterTest" time="0.021"/>
+  <testcase name="save_recordsTimeOfCreationInDatabase" classname="WaterMonsterTest" time="0.015"/>
+  <testcase name="play_recordsTimeLastPlayedInDatabase" classname="WaterMonsterTest" time="0.02"/>
+  <testcase name="isAlive_confirmsWaterMonsterIsAliveIfAllLevelsAboveMinimum_true" classname="WaterMonsterTest" time="0.004"/>
+  <testcase name="waterMonster_playLevelCannotGoBeyondMaxValue" classname="WaterMonsterTest" time="0.03"/>
+  <testcase name="sleep_throwsExceptionIfSleepLevelIsAtMaxValue" classname="WaterMonsterTest" time="0.02"/>
+  <testcase name="sleep_increasesWaterMonsterSleepLevel" classname="WaterMonsterTest" time="0.009"/>
+  <testcase name="play_increasesWaterMonsterPlayLevel" classname="WaterMonsterTest" time="0.01"/>
+  <testcase name="waterMonster_instantiatesWithHalfFullSleepLevel" classname="WaterMonsterTest" time="0.005"/>
+  <testcase name="WaterMonster_instantiatesWithName_String" classname="WaterMonsterTest" time="0.006"/>
+  <testcase name="WaterMonster_instantiatesWithPersonId_int" classname="WaterMonsterTest" time="0.004"/>
+  <testcase name="waterMonster_instantiatesWithHalfFullPlayLevel" classname="WaterMonsterTest" time="0.004"/>
+  <testcase name="water_throwsExceptionIfWaterLevelIsAtMaxValue" classname="WaterMonsterTest" time="0.021"/>
+  <testcase name="isAlive_recognizesWaterMonsterIsDeadWhenLevelsReachMinimum_false" classname="WaterMonsterTest" time="0.005"/>
+  <testcase name="find_returnsWaterMonsterWithSameId_secondWaterMonster" classname="WaterMonsterTest" time="0.017"/>
+  <testcase name="feed_increasesWaterMonsterFoodLevel" classname="WaterMonsterTest" time="0.008"/>
+  <testcase name="all_returnsAllInstancesOfWaterMonster_true" classname="WaterMonsterTest" time="0.029"/>
+  <testcase name="equals_returnsTrueIfNameAndPersonIdAreSame_true" classname="WaterMonsterTest" time="0.005"/>
+  <testcase name="timer_haltsAfterWaterMonsterDies" classname="WaterMonsterTest" time="6.005"/>
+  <testcase name="save_successfullyAddsWaterMonsterToDatabase_List" classname="WaterMonsterTest" time="0.014"/>
+  <testcase name="waterMonster_instantiatesWithHalfFullFoodLevel" classname="WaterMonsterTest" time="0.004"/>
+  <testcase name="play_increasesPlayLevelValue_" classname="WaterMonsterTest" time="0.004"/>
+  <testcase name="save_assignsIdToWaterMonster" classname="WaterMonsterTest" time="0.013"/>
+  <testcase name="feed_recordsTimeLastAteInDatabase" classname="WaterMonsterTest" time="0.017"/>
+  <testcase name="save_assignsIdToObject" classname="WaterMonsterTest" time="0.013"/>
+  <testcase name="play_throwsExceptionIfPlayLevelIsAtMaxValue" classname="WaterMonsterTest" time="0.025"/>
+  <testcase name="depleteLevels_reducesAllLevels" classname="WaterMonsterTest" time="0.003"/>
+  <testcase name="waterMonster_sleepLevelCannotGoBeyondMaxValue" classname="WaterMonsterTest" time="0.018"/>
+  <testcase name="sleep_recordsTimeLastSleptInDatabase" classname="WaterMonsterTest" time="0.017"/>
+  <testcase name="waterMonster_instantiatesWithHalfFullWaterLevel" classname="WaterMonsterTest" time="0.004"/>
+  <testcase name="waterMonster_foodLevelCannotGoBeyondMaxValue" classname="WaterMonsterTest" time="0.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
