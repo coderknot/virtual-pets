@@ -3,6 +3,8 @@ import org.sql2o.*;
 import java.util.List;
 
 public class FireMonster extends Monster {
+  private int fireLevel;
+  public static final int MAX_FIRE_LEVEL = 10;
 
   public FireMonster(String name, int personId) {
     this.name = name;
@@ -25,21 +27,18 @@ public class FireMonster extends Monster {
   }
 
   @Override
-  public void depleteLevels(){
-    if (isAlive()){
-      playLevel--;
-      foodLevel--;
-      sleepLevel--;
-      fireLevel--;
+  public boolean isAlive() {
+    if (foodLevel <= MIN_ALL_LEVELS ||
+    playLevel <= MIN_ALL_LEVELS ||
+    fireLevel <= MIN_ALL_LEVELS ||
+    sleepLevel <= MIN_ALL_LEVELS) {
+      return false;
     }
+    return true;
   }
 
   public int getFireLevel() {
     return fireLevel;
-  }
-
-  public void kindling() {
-    fireLevel++;
   }
 
   public void kindling(){
@@ -58,7 +57,7 @@ public class FireMonster extends Monster {
 
   public static FireMonster find(int id) {
     try(Connection con = DB.sql2o.open()) {
-      String sql = "SELECT * FROM monsters where id=:id";
+      String sql = "SELECT * FROM monsters WHERE id=:id";
       FireMonster monster = con.createQuery(sql)
         .addParameter("id", id)
         .executeAndFetchFirst(FireMonster.class);
